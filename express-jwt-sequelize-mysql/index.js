@@ -102,6 +102,7 @@ app.get('/', function(req, res) {
 
 // login route
 app.post('/login', async function(req, res, next) { 
+  console.log(req.body);
   const { name, password } = req.body;
   if (name && password) {
     // we get the user with the name and save the resolved promise returned
